@@ -1,0 +1,18 @@
+# USER GIVEN MULTIPLE VARIABLES
+def weather_condition(T,H,w):
+    W=(0.5*(T**2))-(0.2*H)+(0.1*w)-15
+    print("Weather : ",W)
+    if W>300:
+        print("Prediction : Sunny")
+    elif 200<W<=300:
+        print("Prediction : Cloudy")
+    elif 100<W<=200:
+        print("Prediction : Rainy")
+    elif W<=100:
+        print("Prediction : Stormy")
+n=int(input("Enter the number for the number of test cases: "))
+for i in range(n):
+    T=int(input("Enter the temperature value: "))
+    H=int(input("Enter the Humidity value: "))
+    w=int(input("Enter the wind value: "))
+    weather_condition(T,H,w)
