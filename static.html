@@ -1,0 +1,15 @@
+#static
+t=28
+h=65
+w=20
+W=0.5*  (t**2)-0.2*h+0.1*w-15
+if W>300:
+  print("sunny")
+elif 200<W<=300:
+  print("cloudy")
+elif 100<W<200:
+  print("rainy")
+elif W<=100:
+  print("stormy")
+else:
+  print("Unavailable")
