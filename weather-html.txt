@@ -1,0 +1,17 @@
+from google.colab import files
+uploaded = files.upload()
+file_content = list(uploaded.values())[0].decode("utf-8").splitlines()
+t = int(file_content[0])
+h = int(file_content[1])
+w = int(file_content[2])
+W = 0.5 * (t ** 2) - 0.2 * h + 0.1 * w - 15
+if W > 300:
+    print("sunny")
+elif 200 < W < 300:
+    print("cloudy")
+elif 100 < W < 200:
+    print("rainy")
+elif W <= 100:
+    print("stormy")
+else:
+    print("can't predict")
